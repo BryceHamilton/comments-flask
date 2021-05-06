@@ -1,13 +1,11 @@
-CREATE DATABASE knights;
-use knights;
+CREATE DATABASE comments;
+use comments;
 
-CREATE TABLE favorite_colors (
-  name VARCHAR(20),
-  color VARCHAR(10)
+CREATE TABLE comments (
+  id MEDIUMINT(9) NOT NULL AUTO_INCREMENT,
+  author VARCHAR(255) NULL DEFAULT NULL,
+  date DATE NULL DEFAULT NULL,
+  content TEXT NULL DEFAULT NULL,
+  author_email VARCHAR(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
 );
-
-INSERT INTO favorite_colors
-  (name, color)
-VALUES
-  ('Lancelot', 'blue'),
-  ('Galahad', 'yellow');
